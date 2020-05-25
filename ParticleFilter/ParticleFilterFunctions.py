@@ -104,17 +104,17 @@ def main():
 		print "Loading simulation datatook", end - start, len(grids), grids[0].shape
 
 	# crop grids to the desired shape
-	shape = (128,128)
+	shape = (32,32)
 	grids = np.array(grids)
 	grids = crop_center(grids, shape[0])
 	print grids.shape
 
-	do_plot = True # Toggle me for DOGMA plots!
+	do_plot = False # Toggle me for DOGMA plots!
 
 	# PARAMETERS
 	p_B = 0.02                                            # birth probability
-	Vb = 2*10**4                                          # number of new born particles
-	V = 2*10**5                                           # number of consistent particles
+	Vb = 2*10**2                                          # number of new born particles
+	V = 2*10**3                                           # number of consistent particles
 	state_size = 4                                        # number of states: p,v: 4
 	alpha = 0.9                                           # information ageing (discount factor)
 

@@ -98,7 +98,7 @@ class Grid(object):
                         cmap=plt.cm.binary, interpolation='none')
             plt.savefig(os.path.join(OUTPUT_DIR, 'simulation_' + str(self.counter) + '.png'))
             self.counter += 1
-            plt.show()
+            plt.show(block=False)
         return
         
 
@@ -138,7 +138,7 @@ class Pedestrian(Mover):
 
 def main():
     # Define environment size (0.33 m resolution)
-    grid_side_len = 256
+    grid_side_len = 64
     grid_spacing = 1
 
     # Define vehicles
@@ -152,10 +152,10 @@ def main():
     vehicles.append(ego)
 
     # Define other agents
-    car1 = Car([100.25,100.], [0,30.])
+    car1 = Car([10.25,10.], [0,23.])
     vehicles.append(car1)
 
-    car2 = Car([150.25,150.], [0,-30.])
+    car2 = Car([45.25,45.], [0,-23.])
     vehicles.append(car2)
     
     # Define jpg labels counter
