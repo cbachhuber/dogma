@@ -109,7 +109,7 @@ def main():
 	grids = crop_center(grids, shape[0])
 	print grids.shape
 
-	do_plot = False # Toggle me for DOGMA plots!
+	do_plot = False  # Toggle me for DOGMA plots!
 
 	# PARAMETERS
 	p_B = 0.02                                            # birth probability
